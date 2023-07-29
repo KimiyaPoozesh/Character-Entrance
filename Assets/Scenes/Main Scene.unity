@@ -1379,7 +1379,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514253771}
-  m_LocalRotation: {x: 0.00039167862, y: 0.99879324, z: 0.008075473, w: -0.048443716}
+  m_LocalRotation: {x: 0.0003916791, y: 0.99879324, z: 0.008075485, w: -0.048443712}
   m_LocalPosition: {x: 11.18, y: -10.291, z: -0.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2022,6 +2022,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1077037373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077037374}
+  m_Layer: 0
+  m_Name: circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077037374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077037373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.6, y: 6.8, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1113082941
 GameObject:
   m_ObjectHideFlags: 0
@@ -8002,6 +8033,8 @@ PlayableDirector:
     value: {fileID: 1677691182}
   - key: {fileID: 7610045310370387589, guid: cfc35fadfad86a540a8820a8b9d98bda, type: 2}
     value: {fileID: 2007252634}
+  - key: {fileID: -8243682132626489484, guid: cfc35fadfad86a540a8820a8b9d98bda, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 420c4d1196058bd4ca4c36a874865792: {fileID: 2002227251}
@@ -8032,6 +8065,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 7e88bd4657d221042a12256065d1aa33, type: 2}
     - {fileID: 11400000, guid: 460862d4bde1d9549844ce7e94ab519d, type: 2}
+    - {fileID: 11400000, guid: 094081f62c94b6b4dba8fca9069b8519, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -8052,6 +8086,20 @@ MonoBehaviour:
         - m_Target: {fileID: 1892639348}
           m_TargetAssemblyTypeName: Manager, Assembly-CSharp
           m_MethodName: bowATT
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1892639348}
+          m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+          m_MethodName: magicCircle
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11032,6 +11080,9 @@ MonoBehaviour:
   knife: {fileID: 1959789222}
   bow: {fileID: 1304456571}
   att: {fileID: 188063558}
+  circle: {fileID: 1077037373}
+  Particlecircle: {fileID: 1269619656826376, guid: 5c734c7bc14483a4d9b880211468f63d,
+    type: 3}
 --- !u!4 &1892639349
 Transform:
   m_ObjectHideFlags: 0
