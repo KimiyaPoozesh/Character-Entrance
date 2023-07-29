@@ -6,7 +6,7 @@ public class Manager : MonoBehaviour
 {
     public ParticleSystem particleSystem;
 
-    public GameObject knife,bow,att;
+    public GameObject knife,bow,att,circle,Particlecircle;
 
     void Start()
     {
@@ -15,11 +15,10 @@ public class Manager : MonoBehaviour
     }
     public void knifeATT()
     {
-        Debug.Log("here");
+        
         knife.SetActive(true);
         particleSystem.Play();
         StartCoroutine(DeactivateKnife());
-
     }
 
     public void bowATT(){
@@ -32,5 +31,10 @@ public class Manager : MonoBehaviour
         yield return new WaitForSeconds(particleSystem.main.duration);
         // Deactivate the knife GameObject
         knife.SetActive(false);
+    }
+
+
+    public void magicCircle(){
+        Instantiate(Particlecircle, circle.transform.position, circle.transform.rotation);
     }
 }
