@@ -6,22 +6,25 @@ public class Manager : MonoBehaviour
 {
     public ParticleSystem particleSystem;
 
-    public GameObject knife,bow,att,circle,Particlecircle;
+    public GameObject knife, bow, att, circle, Particlecircle;
 
     void Start()
     {
         // Get the ParticleSystem component attached to this object
+        Particlecircle.GetComponent<ParticleSystem>().Pause();
+
         particleSystem = GetComponent<ParticleSystem>();
     }
     public void knifeATT()
     {
-        
+
         knife.SetActive(true);
         particleSystem.Play();
         StartCoroutine(DeactivateKnife());
     }
 
-    public void bowATT(){
+    public void bowATT()
+    {
         Instantiate(att, bow.transform.position, bow.transform.rotation);
     }
 
@@ -34,7 +37,9 @@ public class Manager : MonoBehaviour
     }
 
 
-    public void magicCircle(){
-        Instantiate(Particlecircle, circle.transform.position, circle.transform.rotation);
+    public void magicCircle()
+    {
+        Particlecircle.GetComponent<ParticleSystem>().Play();
+
     }
 }
